@@ -10,13 +10,24 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children, child1, child2
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  child1: React.ReactNode,
+  child2: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <h1>Parallel Routes</h1>
+        <div>
+          {child1}
+        </div>
+        <div>
+          {child2}
+        </div>
+        {children}
+      </body>
     </html>
   )
 }
